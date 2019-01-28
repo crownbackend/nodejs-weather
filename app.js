@@ -30,3 +30,7 @@ geocode.geoCodeAddress(argv.address, (errorMessage, results) => {
         })
     }
 })
+
+geocode.geoCodeAddress
+    .then(cb)
+    .then(cb)
