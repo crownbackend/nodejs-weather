@@ -12,9 +12,14 @@ var asyncAdd = (a, b) => {
     })
 };
 
-var promise1 = asyncAdd(5, 5);
 var promise2 = asyncAdd(47, 25);
 
 promise2
     .then(res => console.log(res))
     .catch(err => console.log(err));
+
+asyncAdd(4, 6).then(result => {
+   return asyncAdd(result, 10);
+}).then(res => console.log(res))
+  .then(err => console.log(err))
+  ;
